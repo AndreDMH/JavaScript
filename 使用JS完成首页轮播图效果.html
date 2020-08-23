@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>首页重新布局</title>
+
+		<style>
+			#father {
+				border: 0px solid red;
+				width: 1300px;
+				height: 2156px;
+				margin: auto;
+			}
+			
+			#logo {
+				border: 0px solid black;
+				width: 1300px;
+				height: 50px;
+			}
+			
+			.top {
+				border: 0px solid blue;
+				width: 33.17%;
+				height: 50px;
+				float: left;
+			}
+			
+			#top {
+				padding-top: 12px;
+				height: 38px;
+			}
+			
+			#menu {
+				border: 0px solid green;
+				width: 1300px;
+				height: 50px;
+				background: black;
+			}
+			
+			ul li {
+				display: inline;
+				color: white;
+			}
+			
+			#product {
+				border: 0px solid pink;
+				width: 1300px;
+				height: 553px;
+			}
+			
+			#product-top {
+				border: 0px solid yellow;
+				width: 1300px;
+				height: 38px;
+				padding-top: 10px;
+			}
+			
+			#product-bottom {
+				border: 0px solid red;
+				width: 1300px;
+				height: 500px;
+			}
+			
+			#product-bottom-left {
+				border: 0px solid slateblue;
+				width: 200px;
+				height: 500px;
+				float: left;
+			}
+			
+			#product-bottom-right {
+				border: 0px solid purple;
+				width: 1095px;
+				height: 500px;
+				float: left;
+			}
+			
+			#big {
+				border: 0px solid blue;
+				width: 544px;
+				height: 250px;
+				float: left;
+			}
+			
+			.small {
+				border: 0px solid blue;
+				width: 180px;
+				height: 250px;
+				float: left;
+				text-align: center;
+			}
+			
+			#link {
+				border: 0px solid purple;
+				width: 1300px;
+				height: 64px;
+				text-align: center;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+		</style>
+		<script>
+			function init(){
+				/*书写轮播图显示的定时操作*/
+				window.setInterval("changeImg()",3000);
+			}
+			/*书写函数*/
+			var i=0;
+			function changeImg(){
+				i++;
+				/*获取图片位置并设置src属性值*/
+				document.getElementById("img1").src="../img/"+i+".jpg"
+				if(i==3){
+					i=0;
+				}
+			}
+		</script>
+	</head>
+
+	<body onload="init()">
+		<!--嵌套8个<DIV>-->
+		<div id="father">
+			
+			<!--1.logo部分-->
+			<div id="logo">
+				<div class="top">
+					<img src="../img/logo2.png" height="47px" />
+				</div>
+				<div class="top">
+					<img src="../img/header.png" height="47px" />
+				</div>
+				<div class="top" id="top">
+					<font size="4">
+						<a href="#">登录</a>
+					</font>&nbsp;&nbsp;
+					<font size="4">
+						<a href="#">注册</a>
+					</font>&nbsp;&nbsp;
+					<font size="4">
+						<a href="#">购物车</a>
+					</font>&nbsp;&nbsp;
+
+				</div>
+
+			</div>
+			<!--2.导航栏部分-->
+			<div id="menu">
+				<ul>
+					<a href="#">
+						<li style="font-size: 20px;">首页</li>
+					</a>&nbsp;
+					<a href="#">
+						<li style="font-size: 20px;">手机数码</li>
+					</a>&nbsp;
+					<a href="#">
+						<li style="font-size: 20px;">家用电器</li>
+					</a>&nbsp;
+					<a href="#">
+						<li style="font-size: 20px;">鞋箱靴包</li>
+					</a>&nbsp;
+					<a href="#">
+						<li style="font-size: 20px;">孕婴保健</li>
+					</a>&nbsp;
+					<a href="#">
+						<li style="font-size: 20px;">奢侈品</li>
+					</a>&nbsp;
+				</ul>
+
+			</div>
+			<!--3.轮播图部分-->
+			<div id="">
+				<img src="../img/1.jpg" width="100%" id="img1"/>
+			</div>
+			<!--4.最新商品-->
+			<div id="product">
+				<div id="product-top">&nbsp;&nbsp;&nbsp;
+					<span style="font-size: 25px;">最新商品</span>&nbsp;&nbsp;&nbsp;
+					<img src="../img/title2.jpg" />
+				</div>
+				<div id="product-bottom">
+					<div id="product-bottom-left">
+						<img src="../img/big01.jpg" width="100%" height="100%" />
+					</div>
+					<div id="product-bottom-right">
+						<div id="big">
+							<a href="#"><img src="../img/middle01.jpg" width="100%" height="100%" /></a>
+						</div>
+						<div class="small">
+							<img src="../img/small01.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small04.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small05.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small06.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small07.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small08.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small09.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small02.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<!--5.广告图片-->
+			<div id="">
+				<img src="../img/TIM截图20181215191316.png" width="100%" height="100%" />
+			</div>
+			<!--6.热门商品-->
+			<div id="product">
+				<div id="product-top">&nbsp;&nbsp;&nbsp;
+					<span style="font-size: 25px;">热门商品</span>&nbsp;&nbsp;&nbsp;
+					<img src="../img/title2.jpg" />
+				</div>
+				<div id="product-bottom">
+					<div id="product-bottom-left">
+						<img src="../img/big01.jpg" width="100%" height="100%" />
+					</div>
+					<div id="product-bottom-right">
+						<div id="big">
+							<a href="#"><img src="../img/middle01.jpg" width="100%" height="100%" /></a>
+						</div>
+						<div class="small">
+							<img src="../img/small01.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small03.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small04.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small05.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small06.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small07.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small08.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small09.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+						<div class="small">
+							<img src="../img/small02.jpg" /></br>
+							<a href="#">
+								<p style="color: grey;">咖啡机</p>
+							</a>
+							<p style="color: red;">¥399.00</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!--7.广告图片-->
+			<div id="">
+				<img src="../img/footer.jpg" width="100%" height="100%" />
+			</div>
+			<!--8.友情链接-->
+			<div id="link">
+				<a href="#">关于我们</a>
+				<a href="#">联系我们</a>
+				<a href="#">招贤纳士</a>
+				<a href="#">法律声明</a>
+				<a href="#">支付方式</a>
+				<a href="#">服务声明</a>
+				<a href="#">广告声明</a>
+				<p>
+					copyright @ 2005-2018 明辉商城 版权所有
+				</p>
+			</div>
+		</div>
+		</div>
+	</body>
+
+</html>
